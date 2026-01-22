@@ -3,89 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A beautiful static website">
-    <title>SF People's Gallery</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>SF People's | Community Gallery</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- Maintainable Variables --- */
+        :root {
+            --bg-primary: #000000;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A0A0A0;
+            --border-color: #333333;
+            --font-main: 'Atkinson Hyperlegible', sans-serif;
+            --container-width: 800px;
+            --transition-speed: 0.3s;
+        }
+
+        /* --- Global Reset & Base Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 4rem 0;
+        }
+
+        /* --- Header --- */
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .brand {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+
+        /* --- Content Sections --- */
+        .mission-statement {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            font-weight: 400;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .detail-item h2 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.1em;
+        }
+
+        .detail-item p {
+            font-size: 1.125rem;
+        }
+
+        /* --- Call to Action --- */
+        .cta-section {
+            margin-top: 5rem;
+            padding: 3rem;
+            border: 1px solid var(--text-primary);
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--text-primary);
+            color: var(--bg-primary);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            transition: opacity var(--transition-speed) ease;
+        }
+
+        .cta-button:hover {
+            opacity: 0.8;
+        }
+
+        /* --- Footer --- */
+        footer {
+            margin-top: auto;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        /* --- Responsive Tweaks --- */
+        @media (max-width: 600px) {
+            .brand { font-size: 1.8rem; }
+            .mission-statement { font-size: 1.2rem; }
+            .container { padding: 2rem 0; }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="nav-brand">SF People's Gallery</div>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </nav>
-    </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <h1 class="hero-title">Welcome to SF People's Gallery</h1>
-                <p class="hero-subtitle">A celebration of community and connection</p>
-                <button class="cta-button">Explore Gallery</button>
-            </div>
+    <main class="container">
+        <header>
+            <h1 class="brand">SF People's</h1>
+        </header>
+
+        <section class="mission-statement">
+            The SF People’s Gallery is an open-ended community experiment. We believe that if a moment is meaningful to you, it is worth sharing with the city. By removing the traditional barriers of curation, we offer a raw, unfiltered look at what the Bay Area community finds significant today.
         </section>
 
-        <section id="about" class="about">
-            <div class="container">
-                <h2>About</h2>
-                <div class="about-content">
-                    <p>
-                        SF People's Gallery is a platform dedicated to showcasing the vibrant community
-                        and diverse stories of San Francisco. We celebrate the people, places, and moments
-                        that make our city unique.
-                    </p>
-                </div>
-            </div>
-        </section>
+        <div class="details-grid">
+            <article class="detail-item">
+                <h2>Openness</h2>
+                <p>If you submit a safe-for-work, good-faith photo and we haven't reached 1,000 submissions, your work will be featured on our walls.</p>
+            </article>
 
-        <section id="gallery" class="gallery">
-            <div class="container">
-                <h2>Gallery</h2>
-                <div class="gallery-grid" id="galleryGrid">
-                    <!-- Gallery items will be dynamically added -->
-                </div>
-            </div>
-        </section>
+            <article class="detail-item">
+                <h2>Accsesibility</h2>
+                <p>Entry is free. </p>
+            </article>
+        </div>
 
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>Contact</h2>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-button">Send Message</button>
-                </form>
-            </div>
+        <section class="cta-section">
+            <a href="#" class="cta-button">Submit a Photo</a>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 SF People's Gallery. All rights reserved.</p>
+        <div class="container" style="padding: 0;">
+            &copy; 2026 SF People's. Built for Us.
         </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
