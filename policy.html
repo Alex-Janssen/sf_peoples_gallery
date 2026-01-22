@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Policy | SF People's</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- Maintainable Variables --- */
+        :root {
+            --bg-primary: #000000;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A0A0A0;
+            --border-color: #333333;
+            --font-main: 'Atkinson Hyperlegible', sans-serif;
+            --container-width: 800px;
+            --transition-speed: 0.3s;
+        }
+
+        /* --- Global Reset & Base Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 4rem 0;
+        }
+
+        /* --- Header --- */
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .brand {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            text-decoration: none;
+            color: var(--text-primary);
+            display: block;
+        }
+
+        h1.page-title {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* --- Policy Sections --- */
+        .policy-intro {
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+            border-left: 2px solid var(--text-primary);
+            padding-left: 1.5rem;
+        }
+
+        .policy-group {
+            margin-bottom: 3rem;
+        }
+
+        .policy-group h2 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.1em;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .policy-list {
+            list-style: none;
+        }
+
+        .policy-list li {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .policy-list li::before {
+            content: "✕";
+            margin-right: 1rem;
+            color: #ff4444;
+            font-weight: bold;
+        }
+
+        /* --- Back Link --- */
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+
+        /* --- Footer --- */
+        footer {
+            margin-top: auto;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 600px) {
+            .brand { font-size: 1.8rem; }
+            .container { padding: 2rem 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <a href="index.html" class="back-link">← Return Home</a>
+        
+        <header>
+            <a href="index.html" class="brand">SF People's</a>
+            <h1 class="page-title">Submission Policy</h1>
+        </header>
+
+        <section class="policy-intro">
+            To maintain a safe and inclusive environment for the San Francisco community, all submissions must adhere to the following guidelines. Content that violates these rules will not be displayed.
+        </section>
+
+        <section class="policy-group">
+            <h2>Authenticity & Ownership</h2>
+            <ul class="policy-list">
+                <li>Photos of artwork not created by the submitter.</li>
+                <li>Stock images or placeholders.</li>
+                <li>Screenshots from digital devices or social media.</li>
+                <li>Stock images of artwork not created by the submitter.</li>
+            </ul>
+        </section>
+
+        <section class="policy-group">
+            <h2>Safety & Sensitive Content</h2>
+            <ul class="policy-list">
+                <li>Images containing major violence, tragedy, or gore.</li>
+                <li>Explicit sexual themes or imagery.</li>
+                <li>Content depicting self-harm or suicide.</li>
+                <li>Images containing hate symbols, hate speech, or slurs.</li>
+            </ul>
+        </section>
+
+        <section class="policy-group">
+            <h2>Privacy & Legal</h2>
+            <ul class="policy-list">
+                <li>Images of living people (other than the submitter) where consent is unclear.</li>
+                <li>Photos taken in private spaces that do not belong to the submitter.</li>
+                <li>Political themes intended as propaganda.</li>
+                <li>Criminal themes, including the brandishing of weapons or use of drugs illegal in California.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container" style="padding: 0;">
+            &copy; 2026 SF People's. Built for Us.
+        </div>
+    </footer>
+
+</body>
+</html>

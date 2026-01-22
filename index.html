@@ -18,7 +18,7 @@
             --border-color: #333333;
             --font-main: 'Atkinson Hyperlegible', sans-serif;
             --container-width: 800px;
-            --transition-speed: 0.3s;
+            --transition-speed: 0.2s;
         }
 
         /* --- Global Reset & Base Styles --- */
@@ -89,23 +89,52 @@
         .cta-section {
             margin-top: 5rem;
             padding: 3rem;
-            border: 1px solid var(--text-primary);
+            border: 1px solid var(--border-color);
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.2rem;
         }
 
-        .cta-button {
+        /* White Button */
+        .cta-button-primary {
             display: inline-block;
+            width: 100%;
+            max-width: 320px;
             background: var(--text-primary);
             color: var(--bg-primary);
-            padding: 1rem 2rem;
+            padding: 1.2rem 2rem;
             text-decoration: none;
             font-weight: 700;
-            margin-top: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
             transition: opacity var(--transition-speed) ease;
         }
 
-        .cta-button:hover {
+        /* Black Button (Alternate Style) */
+        .cta-button-secondary {
+            display: inline-block;
+            width: 100%;
+            max-width: 320px;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            border: 1px solid var(--text-primary);
+            padding: 1.2rem 2rem;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: background var(--transition-speed) ease, color var(--transition-speed) ease;
+        }
+
+        .cta-button-primary:hover {
             opacity: 0.8;
+        }
+
+        .cta-button-secondary:hover {
+            background: var(--text-primary);
+            color: var(--bg-primary);
         }
 
         /* --- Footer --- */
@@ -144,13 +173,14 @@
             </article>
 
             <article class="detail-item">
-                <h2>Accsesibility</h2>
-                <p>Entry is free. </p>
+                <h2>Accessibility</h2>
+                <p>Entry is free.</p>
             </article>
         </div>
 
         <section class="cta-section">
-            <a href="#" class="cta-button">Submit a Photo</a>
+            <a href="submit.html" class="cta-button-primary">Submit a Photo</a>
+            <a href="policy.html" class="cta-button-secondary">Submission Policy</a>
         </section>
     </main>
 
